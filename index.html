@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <h1>Open Developer Console to play <em>Rock, Paper, & Scissors</em></h1>
     <script>
         let playerScore = 0;
         let compScore = 0;
@@ -69,6 +69,12 @@
         function playGame() {
             while (playerScore < 5 && playerScore < 5) {
                 playRound(playerSelect(), compSelect(randInt()));
+                console.log("The score is now: " + playerScore + "-" + compScore + "!")
+            };
+            if (playerScore > compScore) {
+                console.log("Congrats, you made it to 5 first! Refresh the page to play again.")
+            } else {
+                console.log("Uh-oh, the Computer made it to 5 first! Refresh the page to play again.")
             };
         };
 
