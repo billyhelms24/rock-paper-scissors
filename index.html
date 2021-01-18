@@ -7,6 +7,9 @@
 </head>
 <body>
     <script>
+        let playerScore = 0;
+        let compScore = 0;
+
         function randInt() {
             return Math.floor(Math.random() * 100) + 1;
         };
@@ -29,48 +32,48 @@
         function playRound(playerSelect, compSelect) {
             console.log("The computer chose: " + compSelect);
             console.log("You chose: " + playerSelect);
-            let playerScore = 0;
-            let compScore = 0;
             if (playerSelect == "rock") {
                 if (compSelect == "rock") {
-                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Draw");
                 } else if (compSelect == "paper") {
                     compScore++;
-                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Defeat");
                 } else {
                     playerScore++;
-                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Victory");
                 };
             } else if (playerSelect == "paper") {
                 if (compSelect == "rock") {
                     playerScore++;
-                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Victory");
                 } else if (compSelect == "paper") {
-                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Draw");
                 } else {
                     compScore++;
-                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Defeat");
                 };
             } else {
                 if (compSelect == "rock") {
                     compScore++;
-                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
-                } else if (compSelect == "paper") {
+                    console.log("Defeat");
+                } else if (compSelect =="paper") {
                     playerScore++;
-                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Victory");
                 } else {
-                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
+                    console.log("Draw");
                 };
             };
         };
 
-        /* function playGame(playRound) {
-            for (let i = 0; i < 5; i++) {
-                playRound(playerSelect(), compSelect(randInt()));
-            };
-        }; */
+        function playGame(playRound) {
+            while (playerScore < 5 && playerScore < 5) {
+                playRound();
+            }
+        }
 
-        console.log(playRound(playerSelect(), compSelect(randInt())));
+        playGame(playRound(playerSelect(), compSelect(randInt())));
+
+        // playRound(playerSelect(), compSelect(randInt()));
         // console.log(compSelect(randInt()));
     </script>
 </body>
