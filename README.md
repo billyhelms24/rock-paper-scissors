@@ -1,2 +1,2 @@
-# tic-tac-toe
-A game of Tic Tac Toe, playable using JS in the browser console.
+# rock-paper-scissors
+A game of Rock Paper Scissors, playable using JS in the browser console.
