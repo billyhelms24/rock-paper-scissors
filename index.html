@@ -7,7 +7,55 @@
 </head>
 <body>
     <script>
-        
+        function randInt() {
+            return Math.floor(Math.random() * 100) + 1;
+        };
+
+        function compSelect(num) {
+            console.log(num)
+            if (num >= 67) {
+                return "rock";
+            } else if (num >= 34) {
+                return "paper";
+            } else {
+                return "scissors";
+            };
+        };
+
+        function playerSelect() {
+            return prompt("Enter one of the following: rock, paper, scissors").toLowerCase;
+        };
+
+        function playRound(playerSelect, compSelect) {
+            if (playerSelect == "rock") {
+                if (compSelect == "rock") {
+                    return "Draw";
+                } else if (compSelect == "paper") {
+                    return "Defeat";
+                } else {
+                    return "Victory";
+                };
+            } else if (playerSelect == "paper") {
+                if (compSelect == "rock") {
+                    return "Victory";
+                } else if (compSelect == "paper") {
+                    return "Draw";
+                } else {
+                    return "Defeat";
+                };
+            } else {
+                if (compSelect == "rock") {
+                    return "Defeat";
+                } else if (compSelect == "paper") {
+                    return "Victory";
+                } else {
+                    return "Draw";
+                };
+            };
+        };
+
+        console.log(playRound(playerSelect(), compSelect(randInt())));
+        // console.log(compSelect(randInt()));
     </script>
 </body>
 </html>
