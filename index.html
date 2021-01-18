@@ -66,13 +66,13 @@
             };
         };
 
-        function playGame(playRound) {
+        function playGame() {
             while (playerScore < 5 && playerScore < 5) {
-                playRound;
-            }
-        }
+                playRound(playerSelect(), compSelect(randInt()));
+            };
+        };
 
-        playGame(playRound(playerSelect(), compSelect(randInt())));
+        playGame();
 
         // playRound(playerSelect(), compSelect(randInt()));
         // console.log(compSelect(randInt()));
