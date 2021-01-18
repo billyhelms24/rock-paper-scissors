@@ -29,44 +29,48 @@
         function playRound(playerSelect, compSelect) {
             console.log("The computer chose: " + compSelect);
             console.log("You chose: " + playerSelect);
+            let playerScore = 0;
+            let compScore = 0;
             if (playerSelect == "rock") {
                 if (compSelect == "rock") {
-                    return "Draw";
+                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
                 } else if (compSelect == "paper") {
-                    return "Defeat";
+                    compScore++;
+                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
                 } else {
-                    return "Victory";
+                    playerScore++;
+                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
                 };
             } else if (playerSelect == "paper") {
                 if (compSelect == "rock") {
-                    return "Victory";
+                    playerScore++;
+                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
                 } else if (compSelect == "paper") {
-                    return "Draw";
+                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
                 } else {
-                    return "Defeat";
+                    compScore++;
+                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
                 };
             } else {
                 if (compSelect == "rock") {
-                    return "Defeat";
+                    compScore++;
+                    return "Defeat, score is now " + playerScore + "-" + compScore + "!";
                 } else if (compSelect == "paper") {
-                    return "Victory";
+                    playerScore++;
+                    return "Victory, score is now " + playerScore + "-" + compScore + "!";
                 } else {
-                    return "Draw";
+                    return "Draw, score is now " + playerScore + "-" + compScore + "!";
                 };
             };
         };
 
-        
-
         /* function playGame(playRound) {
-            let compScore = 0;
-            let playerScore = 0;
             for (let i = 0; i < 5; i++) {
                 playRound(playerSelect(), compSelect(randInt()));
             };
         }; */
 
-        // console.log(playRound(playerSelect(), compSelect(randInt())));
+        console.log(playRound(playerSelect(), compSelect(randInt())));
         // console.log(compSelect(randInt()));
     </script>
 </body>
