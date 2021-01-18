@@ -12,7 +12,7 @@
         };
 
         function compSelect(num) {
-            console.log(num)
+            // console.log(num)
             if (num >= 67) {
                 return "rock";
             } else if (num >= 34) {
@@ -23,10 +23,12 @@
         };
 
         function playerSelect() {
-            return prompt("Enter one of the following: rock, paper, scissors").toLowerCase;
+            return prompt("Enter one of the following: rock, paper, scissors").toLowerCase();
         };
 
         function playRound(playerSelect, compSelect) {
+            console.log("The computer chose: " + compSelect);
+            console.log("You chose: " + playerSelect);
             if (playerSelect == "rock") {
                 if (compSelect == "rock") {
                     return "Draw";
