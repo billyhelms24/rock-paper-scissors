@@ -74,3 +74,6 @@ function playGame() {
 }
 
 playGame();
+
+// playRound(playerSelect(), compSelect(randInt()));
+// console.log(compSelect(randInt()));

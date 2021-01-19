@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-options, .computer-options {
+    display: flex;
+    flex-direction: row;
+}

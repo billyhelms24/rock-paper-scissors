@@ -3,84 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <script>
-        let playerScore = 0;
-        let compScore = 0;
+    <main>
+        <h1>Rock | Paper | Scissors</h1>
+        <h2>Can you beat the computer? First to 3 points wins!</h2>
 
-        function randInt() {
-            return Math.floor(Math.random() * 100) + 1;
-        };
 
-        function compSelect(num) {
-            // console.log(num)
-            if (num >= 67) {
-                return "rock";
-            } else if (num >= 34) {
-                return "paper";
-            } else {
-                return "scissors";
-            };
-        };
+        <h3>You:</h3>
+        <div class="player-options">
+            <div class="rock">
+                <img src="./src/icons/rock.png" alt="">
+            </div>
+            <div class="paper">
+                <img src="./src/icons/paper.png" alt="">
+            </div>
+            <div class="scissors">
+                <img src="./src/icons/scissors.png" alt="">
+            </div>
+        </div>
 
-        function playerSelect() {
-            return prompt("Enter one of the following: rock, paper, scissors").toLowerCase();
-        };
+        <h3>Computer:</h3>
+        <div class="computer-options">
+            <div class="rock">
+                <img src="./src/icons/rock.png" alt="">
+            </div>
+            <div class="paper">
+                <img src="./src/icons/paper.png" alt="">
+            </div>
+            <div class="scissors">
+                <img src="./src/icons/scissors.png" alt="">
+            </div>
+        </div>
 
-        function playRound(playerSelect, compSelect) {
-            console.log("The computer chose: " + compSelect);
-            console.log("You chose: " + playerSelect);
-            if (playerSelect == "rock") {
-                if (compSelect == "rock") {
-                    console.log("Draw");
-                } else if (compSelect == "paper") {
-                    compScore++;
-                    console.log("Defeat");
-                } else {
-                    playerScore++;
-                    console.log("Victory");
-                };
-            } else if (playerSelect == "paper") {
-                if (compSelect == "rock") {
-                    playerScore++;
-                    console.log("Victory");
-                } else if (compSelect == "paper") {
-                    console.log("Draw");
-                } else {
-                    compScore++;
-                    console.log("Defeat");
-                };
-            } else {
-                if (compSelect == "rock") {
-                    compScore++;
-                    console.log("Defeat");
-                } else if (compSelect =="paper") {
-                    playerScore++;
-                    console.log("Victory");
-                } else {
-                    console.log("Draw");
-                };
-            };
-        };
+        <h4 id="result">Victory!</h4>
 
-        function playGame() {
-            while (playerScore < 5 && playerScore < 5) {
-                playRound(playerSelect(), compSelect(randInt()));
-                console.log("The score is now: " + playerScore + "-" + compScore + "!")
-            };
-            if (playerScore > compScore) {
-                console.log("Congrats, you made it to 5 first! Refresh the page to play again.")
-            } else {
-                console.log("Uh-oh, the Computer made it to 5 first! Refresh the page to play again.")
-            };
-        };
+        <h5 id="score">0 - 0</h5>
 
-        playGame();
+    </main>
 
-        // playRound(playerSelect(), compSelect(randInt()));
-        // console.log(compSelect(randInt()));
-    </script>
+    <!-- <script src="./script.js"></script> -->
 </body>
 </html>
