@@ -1,14 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
+    border: 0;
 }
 
-img {
-    height: 100px;
-    width: 100px;
+html, body {
+    height: 100%;
 }
 
-main {
+body {
     display: flex;
     flex-direction: column;
 }
@@ -16,4 +16,16 @@ main {
 .player-options, .computer-options {
     display: flex;
     flex-direction: row;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.option {
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 5px;
 }

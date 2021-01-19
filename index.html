@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Rock, Paper, Scissors</title>
-</head>
-<body>
-    <main>
-        <h1>Rock | Paper | Scissors</h1>
-        <h2>Can you beat the computer? First to 3 points wins!</h2>
+  </head>
+  <body>
+    <h1>Rock | Paper | Scissors</h1>
+    <h1>Can you beat the computer? First to 3 points wins!</h1>
 
+    <h1>You:</h1>
+    <div class="player-options">
+      <div class="rock option">
+        <img src="./src/icons/rock.png" alt="" />
+      </div>
+      <div class="paper option">
+        <img src="./src/icons/paper.png" alt="" />
+      </div>
+      <div class="scissors option">
+        <img src="./src/icons/scissors.png" alt="" />
+      </div>
+    </div>
 
-        <h3>You:</h3>
-        <div class="player-options">
-            <div class="rock">
-                <img src="./src/icons/rock.png" alt="">
-            </div>
-            <div class="paper">
-                <img src="./src/icons/paper.png" alt="">
-            </div>
-            <div class="scissors">
-                <img src="./src/icons/scissors.png" alt="">
-            </div>
-        </div>
+    <h1>Computer:</h1>
+    <div class="computer-options">
+      <div class="rock option">
+        <img src="./src/icons/rock.png" alt="" />
+      </div>
+      <div class="paper option">
+        <img src="./src/icons/paper.png" alt="" />
+      </div>
+      <div class="scissors option">
+        <img src="./src/icons/scissors.png" alt="" />
+      </div>
+    </div>
 
-        <h3>Computer:</h3>
-        <div class="computer-options">
-            <div class="rock">
-                <img src="./src/icons/rock.png" alt="">
-            </div>
-            <div class="paper">
-                <img src="./src/icons/paper.png" alt="">
-            </div>
-            <div class="scissors">
-                <img src="./src/icons/scissors.png" alt="">
-            </div>
-        </div>
+    <h1 id="result">Victory!</h1>
 
-        <h4 id="result">Victory!</h4>
-
-        <h5 id="score">0 - 0</h5>
-
-    </main>
+    <h1 id="score">0 - 0</h1>
 
     <!-- <script src="./script.js"></script> -->
-</body>
+  </body>
 </html>
