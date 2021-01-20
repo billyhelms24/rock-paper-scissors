@@ -80,6 +80,7 @@ let computerScore = 0;
 let randInt = 0;
 
 const scoreBoard = document.querySelector('.score');
+const result = document.querySelector('.result');
 
 function computerSelect(num) {
   if (num >= 67) {
@@ -94,41 +95,42 @@ function computerSelect(num) {
 function checkWinner(playerOption, computerOption) {
   if (playerOption == "rock") {
     if (computerOption == "rock") {
-      console.log("Draw");
+      result.textContent = "Draw!";
     } else if (computerOption == "paper") {
       computerScore++;
-      console.log("Defeat");
+      result.textContent = "Defeat!";
     } else {
       playerScore++;
-      console.log("Victory");
+      result.textContent = "Victory!";
     }
   } else if (playerOption == "paper") {
     if (computerOption == "rock") {
       playerScore++;
-      console.log("Victory");
+      result.textContent = "Victory!";
     } else if (computerOption == "paper") {
-      console.log("Draw");
+      result.textContent = "Draw!";
     } else {
       computerScore++;
-      console.log("Defeat");
+      result.textContent = "Defeat!";
     }
   } else {
     if (computerOption == "rock") {
       computerScore++;
-      console.log("Defeat");
+      result.textContent = "Defeat!";
     } else if (computerOption == "paper") {
       playerScore++;
-      console.log("Victory");
+      result.textContent = "Victory!";
     } else {
-      console.log("Draw");
+      result.textContent = "Draw!";
     }
   }
 }
 
 function playRound() {
   randInt = Math.floor(Math.random() * 100) + 1;
-  checkWinner("rock", computerSelect(randInt));
+  checkWinner(this.dataset.key, computerSelect(randInt));
   scoreBoard.textContent = `${playerScore} - ${computerScore}`;
+  console.log(this.dataset.key)
 };
 
 const playerCards = document.querySelector('.player').querySelectorAll('.option');
