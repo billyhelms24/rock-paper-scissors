@@ -79,7 +79,9 @@ let playerScore = 0;
 let computerScore = 0;
 let randInt = 0;
 
-function compSelect(num) {
+const scoreBoard = document.querySelector('.score');
+
+function computerSelect(num) {
   if (num >= 67) {
     return "rock";
   } else if (num >= 34) {
@@ -89,7 +91,45 @@ function compSelect(num) {
   }
 };
 
-function randInt() {
-  return Math.floor(Math.random() * 100) + 1;
+function checkWinner(playerOption, computerOption) {
+  if (playerOption == "rock") {
+    if (computerOption == "rock") {
+      console.log("Draw");
+    } else if (computerOption == "paper") {
+      computerScore++;
+      console.log("Defeat");
+    } else {
+      playerScore++;
+      console.log("Victory");
+    }
+  } else if (playerOption == "paper") {
+    if (computerOption == "rock") {
+      playerScore++;
+      console.log("Victory");
+    } else if (computerOption == "paper") {
+      console.log("Draw");
+    } else {
+      computerScore++;
+      console.log("Defeat");
+    }
+  } else {
+    if (computerOption == "rock") {
+      computerScore++;
+      console.log("Defeat");
+    } else if (computerOption == "paper") {
+      playerScore++;
+      console.log("Victory");
+    } else {
+      console.log("Draw");
+    }
+  }
+}
+
+function playRound() {
+  randInt = Math.floor(Math.random() * 100) + 1;
+  checkWinner("rock", computerSelect(randInt));
+  scoreBoard.textContent = `${playerScore} - ${computerScore}`;
 };
 
+const playerCards = document.querySelector('.player').querySelectorAll('.option');
+playerCards.forEach(option => option.addEventListener('click', playRound));
