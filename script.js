@@ -1,4 +1,4 @@
-let playerScore = 0;
+/* let playerScore = 0;
 let compScore = 0;
 
 function randInt() {
@@ -73,4 +73,23 @@ function playGame() {
   }
 }
 
-playGame();
+playGame(); */
+
+let playerScore = 0;
+let computerScore = 0;
+let randInt = 0;
+
+function compSelect(num) {
+  if (num >= 67) {
+    return "rock";
+  } else if (num >= 34) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
+};
+
+function randInt() {
+  return Math.floor(Math.random() * 100) + 1;
+};
+
