@@ -4,17 +4,20 @@
     border: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    color : rgb(0, 0, 0, .6);
+    color: rgb(0, 0, 0, 0.6);
+    background-color: #e4c7af;
 }
 
-.player, .computer {
+.player,
+.computer {
     display: flex;
     flex-direction: column;
 }
@@ -27,24 +30,24 @@ body {
 img {
     height: 100px;
     width: 100px;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .option {
     border-style: solid;
-    border-color: rgb(0, 0, 0, .6);
+    border-color: rgb(0, 0, 0, 0.6);
     border-radius: 5px;
     border-width: 4px;
     margin: 10px 10px 0 10px;
 }
 
 .player .option:hover {
-    border-color: rgb(0, 0, 0, .7);
-    background-color: rgb(0, 0, 0, .1);
+    border-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.1);
 }
 
 .player .option:hover img {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 h1 {
