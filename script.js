@@ -22,36 +22,60 @@ function computerSelect() {
     }
 }
 
+function clearDisplay() {
+    computerCards.forEach((option) => {
+        option.classList.remove("selected");
+    });
+
+    playerCards.forEach((option) => {
+        option.classList.remove("selected");
+    });
+}
+
 function checkWinner(playerSelection, computerSelection) {
+    clearDisplay();
+
     if (playerSelection == "rock") {
+        playerCards[0].classList.add("selected");
         if (computerSelection == "rock") {
             result.textContent = "Draw!";
+            computerCards[0].classList.add("selected");
         } else if (computerSelection == "paper") {
             computerScore++;
             result.textContent = "Defeat!";
+            computerCards[1].classList.add("selected");
         } else {
             playerScore++;
             result.textContent = "Victory!";
+            computerCards[2].classList.add("selected");
         }
     } else if (playerSelection == "paper") {
+        playerCards[1].classList.add("selected");
         if (computerSelection == "rock") {
             playerScore++;
             result.textContent = "Victory!";
+            computerCards[0].classList.add("selected");
         } else if (computerSelection == "paper") {
             result.textContent = "Draw!";
+            computerCards[1].classList.add("selected");
         } else {
             computerScore++;
             result.textContent = "Defeat!";
+            computerCards[2].classList.add("selected");
         }
     } else {
+        playerCards[2].classList.add("selected");
         if (computerSelection == "rock") {
             computerScore++;
             result.textContent = "Defeat!";
+            computerCards[0].classList.add("selected");
         } else if (computerSelection == "paper") {
             playerScore++;
             result.textContent = "Victory!";
+            computerCards[1].classList.add("selected");
         } else {
             result.textContent = "Draw!";
+            computerCards[2].classList.add("selected");
         }
     }
 }

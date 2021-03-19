@@ -50,6 +50,15 @@ img {
     opacity: 0.7;
 }
 
+.selected {
+    border-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.selected img {
+    opacity: 0.7;
+}
+
 h1 {
     font-size: 50px;
     margin-bottom: 0px;
