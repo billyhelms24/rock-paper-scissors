@@ -80,9 +80,30 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
+function gameEnd() {
+    if (playerScore == 5 || computerScore == 5) {
+        playerCards.forEach((option) =>
+            option.removeEventListener("click", playRound)
+        );
+
+        setTimeout(() => {
+            if (playerScore > computerScore) {
+                alert(
+                    "Congrats, you beat the computer! To replay, simply refresh the browser."
+                );
+            } else {
+                alert(
+                    "It looks like the computer got the best of you this time. Refresh the browser to try again."
+                );
+            }
+        }, 100);
+    }
+}
+
 function playRound() {
     checkWinner(this.dataset.key, computerSelect());
     scoreBoard.textContent = `${playerScore} - ${computerScore}`;
+    gameEnd();
 }
 
 playerCards.forEach((option) => option.addEventListener("click", playRound));
