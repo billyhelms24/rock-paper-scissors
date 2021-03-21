@@ -35,12 +35,12 @@ function clearDisplay() {
 function checkWinner(playerSelection, computerSelection) {
     clearDisplay();
 
-    if (playerSelection == "rock") {
+    if (playerSelection === "rock") {
         playerCards[0].classList.add("selected");
-        if (computerSelection == "rock") {
+        if (computerSelection === "rock") {
             result.textContent = "Draw!";
             computerCards[0].classList.add("selected");
-        } else if (computerSelection == "paper") {
+        } else if (computerSelection === "paper") {
             computerScore++;
             result.textContent = "Defeat!";
             computerCards[1].classList.add("selected");
@@ -49,13 +49,13 @@ function checkWinner(playerSelection, computerSelection) {
             result.textContent = "Victory!";
             computerCards[2].classList.add("selected");
         }
-    } else if (playerSelection == "paper") {
+    } else if (playerSelection === "paper") {
         playerCards[1].classList.add("selected");
-        if (computerSelection == "rock") {
+        if (computerSelection === "rock") {
             playerScore++;
             result.textContent = "Victory!";
             computerCards[0].classList.add("selected");
-        } else if (computerSelection == "paper") {
+        } else if (computerSelection === "paper") {
             result.textContent = "Draw!";
             computerCards[1].classList.add("selected");
         } else {
@@ -65,11 +65,11 @@ function checkWinner(playerSelection, computerSelection) {
         }
     } else {
         playerCards[2].classList.add("selected");
-        if (computerSelection == "rock") {
+        if (computerSelection === "rock") {
             computerScore++;
             result.textContent = "Defeat!";
             computerCards[0].classList.add("selected");
-        } else if (computerSelection == "paper") {
+        } else if (computerSelection === "paper") {
             playerScore++;
             result.textContent = "Victory!";
             computerCards[1].classList.add("selected");
@@ -81,7 +81,7 @@ function checkWinner(playerSelection, computerSelection) {
 }
 
 function gameEnd() {
-    if (playerScore == 5 || computerScore == 5) {
+    if (playerScore === 5 || computerScore === 5) {
         playerCards.forEach((option) =>
             option.removeEventListener("click", playRound)
         );
