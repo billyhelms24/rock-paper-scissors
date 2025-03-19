@@ -4,4 +4,4 @@ An RPS game that takes place in the browser, against the computer. This project 
 
 [**Live Preview**](https://billyhelms24.github.io/rock-paper-scissors/)
 
-![rock-paper-scissors.png](https://raw.githubusercontent.com/billyhelms24/git-test/main/screenshots/rock-paper-scissors.png)
+![rock-paper-scissors.png](https://raw.githubusercontent.com/billyhelms24/billyhelms24/main/screenshots/rock-paper-scissors.png)
